@@ -50,6 +50,7 @@ To build and run with Docker:
 docker build -t font-svg-generator .
 docker run -p 3000:3000 font-svg-generator
 ```
+---
 
 ## 💡 Deploy
 
