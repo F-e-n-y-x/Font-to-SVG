@@ -56,6 +56,22 @@ docker run -p 3000:3000 font-svg-generator
 ## 🗂 Project Structure
 
 ```
+svg-text-generator/
+├── server.js              # Express server with upload APIs
+├── package.json           # Dependencies and scripts
+├── public/                # Frontend files
+│   ├── index.html         # Main interface
+│   ├── style.css          # Complete styling system
+│   ├── app.js             # Application logic
+│   └── assets/
+│       └── icons/
+│           ├── upload_dark.svg
+│           └── upload_light.svg
+├── uploads/               # Font upload directory
+└── README.md              # This file
+```
+
+```
 /public          → Frontend HTML, CSS, JS
 /uploads         → Uploaded font files + fonts.json
 server.js        → Express backend
@@ -63,6 +79,12 @@ Dockerfile       → For container deployment
 ```
 
 ---
+
+## API Endpoints
+
+- `GET /api/fonts` - List all uploaded fonts
+- `POST /api/upload-font` - Upload new font file
+- `POST /api/generate-svg` - Generate SVG from text
 
 ## ✨ Technologies Used
 
