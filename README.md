@@ -22,8 +22,8 @@ A modern web app to upload custom fonts and instantly convert text into download
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/font-svg-generator.git
-cd font-svg-generator
+git clone https://github.com/F-e-n-y-x/Font-to-SVG.git
+cd Font-to-SVG
 ```
 
 ### 2. Install dependencies
@@ -89,7 +89,7 @@ File name: `Inter_HelloW.svg`
 
 ## 🛡 License
 
-MIT © Ayush(https://github.com/yourusername)
+MIT © Ayush(https://github.com/F-e-n-y-x)
 
 ---
 
