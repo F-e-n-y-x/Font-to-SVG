@@ -55,7 +55,6 @@ docker run -p 3000:3000 font-svg-generator
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/F-e-n-y-x/Font-to-SVG/)
 
-
 ---
 
 ## 🗂 Project Structure
@@ -117,7 +116,7 @@ File name: `Inter_HelloW.svg`
 
 ## 🛡 License
 
-MIT © Ayush(https://github.com/F-e-n-y-x)
+MIT © [Ayush](https://github.com/F-e-n-y-x)
 
 ---
 
