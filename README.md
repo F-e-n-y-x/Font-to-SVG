@@ -57,6 +57,7 @@ docker run -p 3000:3000 font-svg-generator
 
 ```
 svg-text-generator/
+├── dockerfile             # For container deployment
 ├── server.js              # Express server with upload APIs
 ├── package.json           # Dependencies and scripts
 ├── public/                # Frontend files
