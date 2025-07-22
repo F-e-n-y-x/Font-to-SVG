@@ -1,1 +1,1 @@
-#☀️🌙 Light & Dark mode ready
+# ☀️🌙 Light & Dark mode ready
