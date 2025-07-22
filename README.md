@@ -2,7 +2,7 @@
 
 A modern web app to upload custom fonts and instantly convert text into downloadable vector SVGs using those fonts. Great for designers, devs, and typographers.
 
-![screenshot]([https://raw.githubusercontent.com/F-e-n-y-x/Font-to-SVG/refs/heads/main/screenshots/dark.png])
+![screenshot](https://raw.githubusercontent.com/F-e-n-y-x/Font-to-SVG/refs/heads/main/screenshots/dark.png)
 
 ---
 
