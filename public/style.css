@@ -63,7 +63,6 @@ body, html {
     display: flex;
     min-height: 0;
     height: 100vh;
-    flex-direction: row-reverse; /* 👈 flips the order */
 }
 
 .left-panel {
@@ -335,7 +334,7 @@ body, html {
 .theme-toggle {
   position: absolute;
   top: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 100;
   width: 45px;
   height: 45px;
