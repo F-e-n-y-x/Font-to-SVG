@@ -1,4 +1,5 @@
-# ![logo](https://raw.githubusercontent.com/F-e-n-y-x/Font-to-SVG/refs/heads/main/logo.svg) Font to SVG Generator
+# ![logo]
+(https://raw.githubusercontent.com/F-e-n-y-x/Font-to-SVG/refs/heads/main/logo.svg) Font to SVG Generator
 
 A modern web app to upload custom fonts and instantly convert text into downloadable vector SVGs using those fonts. Great for designers, devs, and typographers.
 
