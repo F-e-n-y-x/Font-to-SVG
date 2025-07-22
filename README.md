@@ -1,4 +1,4 @@
-# 🖋️ Font to SVG Generator
+#  Font to SVG Generator
 
 A modern web app to upload custom fonts and instantly convert text into downloadable vector SVGs using those fonts. Great for designers, devs, and typographers.
 
