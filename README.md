@@ -51,7 +51,7 @@ docker build -t font-svg-generator .
 docker run -p 3000:3000 font-svg-generator
 ```
 
-## 🗂 Font to SVG Generator
+## 💡 Font to SVG Generator
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/F-e-n-y-x/Font-to-SVG/)
 
