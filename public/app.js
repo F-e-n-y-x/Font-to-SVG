@@ -1,6 +1,6 @@
 class SVGTextGenerator {
     constructor() {
-	this.defaultFonts = ["PAGE SERIF", "Wendy One"];
+	this.defaultFonts = ["Wendy One"];
         this.currentFonts = [...this.defaultFonts];
         this.selectedFont = this.defaultFonts[0];
         this.selectedVariant = 'regular';
