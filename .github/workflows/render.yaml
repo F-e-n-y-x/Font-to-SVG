@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: font-svg-generator
-    env: node
-    plan: free
-    buildCommand: npm install
-    startCommand: npm start
-    branch: main
-    autoDeploy: true
