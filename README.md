@@ -10,6 +10,7 @@ A modern, professional web app to upload custom fonts and instantly convert text
 ## 🚀 Features
 
 - **🔤 Custom Font Upload** - Support for TTF, OTF, WOFF, and WOFF2 files (up to 5MB)
+- **🔍 Search Support** - Easily find and filter through your uploaded fonts
 - **✍️ Live Preview** - Real-time text editing with full word wrap and cursor support
 - **📥 SVG Export** - Generates true vector paths using custom fonts for download
 - **☀️🌙 Light & Dark Theme** - Complete theme system with persistence
