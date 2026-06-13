@@ -1,40 +1,75 @@
-# SVG Text Generator
+<p align="center"><img src="https://raw.githubusercontent.com/F-e-n-y-x/Font-to-SVG/refs/heads/main/logo.svg" width="100" height="100"></p>
+<h1 align="center"> Font to SVG Generator </h1>
 
-A modern, professional SVG text generator with custom font upload capabilities and theme support.
+A modern, professional web app to upload custom fonts and instantly convert text into downloadable scalable vector SVGs using those fonts. Great for designers, devs, and typographers.
 
-## Features
+![screenshot](https://raw.githubusercontent.com/F-e-n-y-x/Font-to-SVG/refs/heads/main/screenshots/light.png)
 
-- **Modern Custom Dropdowns** - Smooth animations with no scrollbars
-- **Custom Font Upload** - Support for TTF, OTF, WOFF, WOFF2 files
-- **Dark/Light Theme** - Complete theme system with persistence
-- **SVG Export** - True vector path generation for custom fonts
-- **Responsive Design** - Works perfectly on all devices
-- **Professional UI** - Clean, modern interface with smooth interactions
+---
 
-## Quick Start
+## 🚀 Features
 
-1. **Install Dependencies**
-   ```bash
-   npm install
-   ```
+- **🔤 Custom Font Upload** - Support for TTF, OTF, WOFF, and WOFF2 files (up to 5MB)
+- **✍️ Live Preview** - Real-time text editing with full word wrap and cursor support
+- **📥 SVG Export** - Generates true vector paths using custom fonts for download
+- **☀️🌙 Light & Dark Theme** - Complete theme system with persistence (Toggle via UI or `Ctrl+Shift+T`)
+- **🎛️ Modern Custom Dropdowns** - Smooth animations with no scrollbars
+- **📱 Responsive Design** - Mobile-first approach, works perfectly on all devices
+- **🔁 Persistent Fonts** - Uploaded fonts are saved across sessions via JSON store
+- **🐳 Docker-Ready** - Containerized for easy deployment anywhere
 
-2. **Start Server**
-   ```bash
-   npm start
-   ```
+---
 
-3. **Open Browser**
-   ```
-   http://localhost:3000
-   ```
+## ⚙️ Installation
 
-## Project Structure
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/F-e-n-y-x/Font-to-SVG.git
+cd Font-to-SVG
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app
+
+```bash
+npm start
+```
+
+By default, it runs at: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🐳 Docker Setup
+
+To build and run with Docker:
+
+```bash
+docker build -t font-svg-generator .
+docker run -p 3000:3000 font-svg-generator
+```
+
+---
+
+## 💡 Deploy
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/F-e-n-y-x/Font-to-SVG/)
+
+---
+
+## 🗂 Project Structure
 
 ```
 svg-text-generator/
+├── dockerfile             # For container deployment
 ├── server.js              # Express server with upload APIs
 ├── package.json           # Dependencies and scripts
-├── public/                # Frontend files
+├── public/                # Frontend HTML, CSS, Vanilla JS
 │   ├── index.html         # Main interface
 │   ├── style.css          # Complete styling system
 │   ├── app.js             # Application logic
@@ -42,67 +77,55 @@ svg-text-generator/
 │       └── icons/
 │           ├── upload_dark.svg
 │           └── upload_light.svg
-├── uploads/               # Font upload directory
+├── uploads/               # Uploaded font files + fonts.json
 └── README.md              # This file
 ```
 
-## Usage
+---
 
-### Uploading Fonts
-- Drag and drop font files onto the upload area
-- Or click to browse and select files
-- Supports TTF, OTF, WOFF, and WOFF2 formats
-- Maximum file size: 5MB per font
-
-### Text Editing
-- Click on "Type text here" to start editing
-- Text updates in real-time with font changes
-- Full word wrap and cursor support
-
-### Theme Switching
-- Click the theme toggle button (top-right)
-- Or use keyboard shortcut: Ctrl+Shift+T
-- Theme preference is saved automatically
-
-### SVG Export
-- Click "Download SVG" to export your text
-- Generates scalable vector graphics
-- Custom fonts create true vector paths
-
-## Technical Details
-
-### Backend
-- **Express.js** - Web server and API endpoints
-- **Multer** - Secure file upload handling
-- **OpenType.js** - Font parsing and vector generation
-
-### Frontend
-- **Vanilla JavaScript** - No frameworks, pure performance
-- **CSS Custom Properties** - Complete theming system
-- **FontFace API** - Modern font loading
-- **Responsive Design** - Mobile-first approach
-
-### Font Processing
-1. File validation and security checking
-2. Server-side storage in uploads directory
-3. Metadata extraction for proper naming
-4. Browser font loading via FontFace API
-5. Dynamic dropdown population
-6. Vector path generation for SVG export
-
-## API Endpoints
+## 🔌 API Endpoints
 
 - `GET /api/fonts` - List all uploaded fonts
 - `POST /api/upload-font` - Upload new font file
 - `POST /api/generate-svg` - Generate SVG from text
 
-## Browser Support
+---
 
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
+## ✨ Technologies Used
 
-## License
+### Backend
+- [Node.js](https://nodejs.org/) & [Express](https://expressjs.com/) - Web server and API endpoints
+- [Multer](https://github.com/expressjs/multer) – Secure file upload handling
+- [Fontkit](https://github.com/foliojs/fontkit) – Font parsing and validation
+- [Text-to-SVG](https://github.com/shrhdk/text-to-svg) – Vector path rendering for SVG export
 
-MIT License - Feel free to use in your projects!
+### Frontend
+- **Vanilla JavaScript** - No frameworks, pure performance
+- **CSS Custom Properties** - Complete theming system
+- **FontFace API** - Modern dynamic font loading
+
+---
+
+## 📦 Example Output
+
+After typing and styling, clicking **Download SVG** will give:
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="...">
+  <path d="M12.2..." />
+</svg>
+```
+
+File name: `Inter_HelloW.svg`
+
+---
+
+## 🛡 License
+
+MIT © [Ayush](https://github.com/F-e-n-y-x)
+
+---
+
+## 🙌 Credits
+
+Inspired by tools like Glyphr, SVGOMG, and Google Fonts.  
+Built with love for font nerds & vector lovers. ❤️
