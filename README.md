@@ -17,6 +17,7 @@ A modern, professional web app to upload custom fonts and instantly convert text
 - **🎛️ Modern Custom Dropdowns** - Smooth animations with no scrollbars
 - **📱 Responsive Design** - Mobile-first approach, works perfectly on all devices
 - **🔁 Persistent Fonts** - Uploaded fonts are saved across sessions via JSON store
+- **🧹 Auto-Cleanup** - Configurable scheduled deletion of non-protected fonts via `.env`
 - **🐳 Docker-Ready** - Containerized for easy deployment anywhere
 
 ---

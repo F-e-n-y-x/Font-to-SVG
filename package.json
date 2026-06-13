@@ -19,6 +19,7 @@
   "author": "Ayush Soni",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "5.1.0",
     "fontkit": "^2.0.4",
     "multer": "^2.0.2",

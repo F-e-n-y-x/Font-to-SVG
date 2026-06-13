@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const multer  = require('multer');
 const path = require('path');
@@ -99,6 +100,51 @@ app.post('/api/generate-svg', (req, res) => {
         res.status(500).send('SVG generation failed');
     }
 });
+
+// --- Font Cleanup Logic ---
+const PROTECTED_FONTS = [
+    '1753157198566-PAGE serif.otf',
+    '1753156279451-WendyOne-Regular.ttf'
+];
+
+function cleanupFonts() {
+    try {
+        console.log('🧹 Running scheduled font cleanup...');
+        let fonts = [];
+        if (fs.existsSync(fontsJsonPath)) {
+            fonts = JSON.parse(fs.readFileSync(fontsJsonPath));
+        }
+
+        // 1. Delete physical files from uploads/ folder
+        const files = fs.readdirSync(uploadsDir);
+        files.forEach(file => {
+            if (file === 'fonts.json' || PROTECTED_FONTS.includes(file)) return;
+            const filePath = path.join(uploadsDir, file);
+            try {
+                fs.unlinkSync(filePath);
+                console.log(`Deleted font file: ${file}`);
+            } catch (err) {
+                console.error(`Failed to delete file: ${file}`, err);
+            }
+        });
+
+        // 2. Keep only protected fonts in fonts.json
+        const keptFonts = fonts.filter(f => PROTECTED_FONTS.includes(f.filename));
+        fs.writeFileSync(fontsJsonPath, JSON.stringify(keptFonts, null, 2));
+        console.log('✅ Cleanup complete. fonts.json updated.');
+    } catch (err) {
+        console.error('Error during font cleanup:', err);
+    }
+}
+
+// Start cleanup interval if configured
+if (process.env.CLEANUP_INTERVAL_MINUTES) {
+    const intervalMs = parseInt(process.env.CLEANUP_INTERVAL_MINUTES) * 60 * 1000;
+    if (!isNaN(intervalMs) && intervalMs > 0) {
+        console.log(`⏳ Scheduled font cleanup every ${process.env.CLEANUP_INTERVAL_MINUTES} minutes.`);
+        setInterval(cleanupFonts, intervalMs);
+    }
+}
 
 // Start server
 app.listen(PORT, () => {
